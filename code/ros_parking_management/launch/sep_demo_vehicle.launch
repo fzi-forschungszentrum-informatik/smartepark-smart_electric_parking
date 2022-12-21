@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="output" default="screen" />
+  <arg name="normal_prefix" default=""/>
+  <arg name="debug_prefix" default="xterm -e gdb --ex run --args"/>
+
+  <arg name="lanelets_filename" default=""/>
+
+
+  <group ns="car2x">
+
+    <node pkg="ros_car2x_trajectory_conversions" type="car2x_to_trajectory_converter" name="vehicle_car2x_to_trajectory_converter_from_infra" output="screen">
+
+      <param name="loop_rate" value="50"/>
+
+      <!-- trajectories to convert from car2x types to geometry or fzi_geometry_msgs types -->
+      <remap from="~in_car2x_traj" to="from_infra/trajectory_c2x"/>
+      <remap from="~out_fzi_geom_trajectory" to="from_infra/trajectory"/>
+      <remap from="~out_trajectory" to="/execution/set_trajectory"/>
+
+      <!-- trajectories to convert from geometry or fzi_geometry_msgs types to car2x types-->
+      <remap from="~in_fzi_geom_trajectory" to="/unused/geometry_trajectory_in"/>
+      <remap from="~out_car2x_traj" to="/unused/car2x/to_infra/trajectory_c2x"/>
+      <remap from="~out_vis" to="/visualization/car2x/from_infra/trajectory_c2x"/>
+    </node>
+
+  </group>
+
+  <group >
+
+    <node name="vehicle_demo_vehicle_side" pkg="ros_parking_management" type="demo_vehicle_side" output="screen">
+
+      <param name= "loop_rate" value="20" />
+      <param name="lanelets_filename" value="$(arg lanelets_filename)"/>
+
+      <param name="length" value="4.629" />
+      <param name="width" value="2.089" />
+      <param name="turning_radius" value="5.0" />
+      <param name="dist_rear_axle_numberplate" value="0.927" />
+
+      <param name="state_of_charge" value="0.5" />
+      <param name="charge_type" value="1" />
+      <param name="station_id" value="1" />
+
+      <remap from="~out_vehicle_information" to="/car2x/to_infra/vehicle_information"/>
+      <remap from="~out_lanelet_map_marker_array" to="/visualization/map/lanelets2"/>
+      <remap from="~out_cam_stamped" to="/car2x/to_infra/cam"/>
+
+      <remap from="~in_curvepoints" to="/execution/curve_points"/>
+      <remap from="/trajectory_completed" to="/execution/trajectory_completed"/>
+
+    </node>
+
+  </group>
+
+</launch>

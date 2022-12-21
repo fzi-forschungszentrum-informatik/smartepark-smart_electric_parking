@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros_parking_management</name>
+  <version>1.0.0</version>
+  <description>The ros_parking_management package contains the parking management system developed in the project SmartEPark. </description>
+
+  <maintainer email="schoerner@fzi.de">Philip Schörner</maintainer>
+
+  <license>Copyright (c) 2022, FZI Forschungszentrum Informatik</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>gazebo_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <depend>lanelet2_core</depend>
+  <depend>lanelet2_io</depend>
+  <depend>lanelet2_maps</depend>
+  <depend>lanelet2_projection</depend>
+  <depend>lanelet2_traffic_rules</depend>
+  <depend>lanelet2_matching</depend>
+  <depend>lanelet2_routing</depend>
+  <depend>lanelet2_python</depend>
+  <depend>steering_functions</depend>
+
+  <depend>fzi_car2x_msgs</depend>
+  <depend>fzi_curvepoint_msgs</depend>
+  <depend>fzi_sensor_msgs</depend>
+  <depend>ros_parking_management_msgs</depend>
+  <depend>ros_scene_prediction</depend>
+  <depend>ros_scene_prediction_msgs</depend>
+  <depend>ros_lanelet2_visualization</depend>
+  <depend>ros_geom</depend>
+
+  <depend>math</depend>
+  <depend>math_openmp</depend>
+  <depend>geom</depend>
+  <depend>gprj</depend>
+  <depend>colors</depend>
+  <depend>traj</depend>
+
+
+</package>

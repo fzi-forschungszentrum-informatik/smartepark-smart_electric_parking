@@ -1,0 +1,13 @@
+###
+#
+# get position of vehicle service
+#
+###
+
+VehicleIdentificationMsg identifiers
+
+---
+
+VehicleStatusMsg vehicle_status
+float32 latitude
+float32 longitude

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="output" default="screen" />
+  <arg name="normal_prefix" default=""/>
+  <arg name="debug_prefix" default="xterm -e gdb --ex run --args"/>
+
+  <node pkg="ros_parking_planner" type="car2x_trajectory_converter" name="car2x_trajectory_converter" output="screen" launch-prefix="$(arg debug_prefix)">
+
+    <param name="loop_rate" value="50"/>
+
+    <remap from="out_trajectory" to="/execution/set_trajectory"/>
+    <remap from="in_car2x" to="/car2x_trajectory"/>
+
+    <remap from="out_car2x" to="/car2x_trajectory_out"/>
+    <remap from="in_trajectory" to="/geometry_trajectory_in"/>
+
+  </node>
+
+</launch>

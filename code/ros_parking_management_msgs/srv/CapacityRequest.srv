@@ -1,0 +1,12 @@
+###
+#
+# request parking space service
+#
+###
+
+#request
+
+---
+#response
+CapacityMsg capacity_total
+CapacityMsg capacity_free

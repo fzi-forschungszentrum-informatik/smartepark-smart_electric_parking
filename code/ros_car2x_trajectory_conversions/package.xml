@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros_car2x_trajectory_conversions</name>
+  <version>1.0.0</version>
+  <description>The ros_car2x_trajectory_conversions package </description>
+
+  <maintainer email="schoerner@fzi.de">Philip Schoerner</maintainer>
+
+  <license>Copyright (c) 2022, FZI Forschungszentrum Informatik</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+
+  <depend>message_generation</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf</depend>
+  <depend>tf2</depend>
+  <depend>eigen_conversions</depend>
+  <depend>visualization_msgs</depend>
+
+  <depend>fzi_traffic_planning_msgs</depend>
+  <depend>ros_parking_management_msgs</depend>
+  <depend>ros_geom</depend>
+
+  <depend>math</depend>
+  <depend>geom</depend>
+  <depend>traj</depend>
+
+
+  <export>
+
+  </export>
+</package>

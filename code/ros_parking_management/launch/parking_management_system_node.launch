@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="output" default="screen" />
+  <arg name="normal_prefix" default=""/>
+
+  <arg name="lanelets_filename" default=""/>
+
+  <node pkg="ros_parking_management" type="parking_management_system_node" name="parking_management_system" output="screen" launch-prefix="$(arg normal_prefix)">
+
+    <param name="loop_rate" value="10"/>
+    <param name="lanelets_filename" value="$(arg lanelets_filename)"/>
+    <param name="initialize_static_env_from_map" value="true"/>
+
+    <remap from="~out_parking_garage_information" to="/pms/parking_garage_information"/>
+    <remap from="~out_dropoff_area_status" to="/pms/dropoff_area_status"/>
+    <remap from="~out_vehicle_motion_instructions" to="/pms/vehicle_motion_instructions"/>
+    <remap from="~out_high_frequent_trajectory" to="/pms/high_frequent_trajectory"/>
+    <remap from="~out_lanelet_map_marker_array" to="/visualization/lanelet_map_marker_array"/>
+    <remap from="~out_static_polygons" to="/visualization/static_polygons"/>
+    <remap from="~out_vehicle_paths_vis" to="/visualization/vehicle_paths_vis"/>
+    <remap from="~out_assignment_marker" to="/visualization/assignment_marker"/>
+
+    <remap from="~in_obstacles" to="/obstacles_map"/>
+    <remap from="~in_grid" to="/costmap_node/costmap/costmap"/>
+    <remap from="~in_cam" to="/cam_stamped"/>
+    <remap from="~in_vehicle_information_car2x" to="/car2x/vehicle_information"/>
+
+    <remap from="~out_get_capacity" to="/get_capacity"/>
+    <remap from="~out_capacity" to="/capacity_request"/>
+    <remap from="~out_unregistered_station_id" to="/pms/get_unregistered_station_id"/>
+    <remap from="~out_vehicle_position" to="/vehicle_position_request"/>
+    <remap from="~out_unpark_vehicle" to="/unpark_vehicle_request"/>
+    <remap from="~out_register" to="/pms/register_vehicle"/>
+
+  </node>
+
+</launch>
+
+
+

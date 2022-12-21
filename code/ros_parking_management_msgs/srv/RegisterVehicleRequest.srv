@@ -1,0 +1,11 @@
+###
+#
+# Register vehicle to pms service
+#
+###
+
+VehicleInformationMsg info
+
+---
+
+bool success

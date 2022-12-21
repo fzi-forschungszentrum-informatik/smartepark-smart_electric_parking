@@ -1,0 +1,11 @@
+###
+#
+# request a vehicle to park out service
+#
+###
+
+VehicleIdentificationMsg identifiers
+
+---
+
+VehicleStatusMsg vehicle_status

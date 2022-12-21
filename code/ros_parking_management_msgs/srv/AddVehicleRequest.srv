@@ -1,0 +1,14 @@
+###
+#
+# Add a vehicle service
+#
+###
+
+#request
+int32 stationId
+
+---
+
+#response
+bool success
+

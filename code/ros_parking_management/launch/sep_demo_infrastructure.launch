@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="output" default="screen" />
+  <arg name="normal_prefix" default=""/>
+  <arg name="debug_prefix" default="xterm -e gdb --ex run --args"/>
+
+  <arg name="lanelets_filename" default=""/>
+
+  <node pkg="ros_car2x_trajectory_conversions" type="car2x_to_trajectory_converter" name="infra_car2x_to_trajectory_converter_to_vehicle" output="screen">
+
+    <param name="loop_rate" value="50"/>
+
+    <!-- trajectories to convert from car2x types to geometry or fzi_geometry_msgs types -->
+    <remap from="~in_car2x_traj" to="/unused/car2x/trajectory_c2x"/>
+    <remap from="~out_fzi_geom_trajectory" to="/unused/car2x/trajectory"/>
+    <remap from="~out_trajectory" to="/unused/execution/set_trajectory"/>
+
+    <!-- trajectories to convert from geometry or fzi_geometry_msgs types to car2x types-->
+    <remap from="~in_fzi_geom_trajectory" to="/geometry_trajectory_in"/>
+    <remap from="~out_car2x_traj" to="/car2x/to_vehicle/trajectory_c2x"/>
+  </node>
+
+  <node pkg="ros_parking_management" type="parking_management_system_node" name="infra_parking_management_system" output="screen" launch-prefix="$(arg normal_prefix)">
+
+    <param name="loop_rate" value="10"/>
+    <param name="lanelets_filename" value="$(arg lanelets_filename)"/>
+    <param name="initialize_static_env_from_map" value="true"/>
+
+    <remap from="~out_parking_garage_information" to="/pms/parking_garage_information"/>
+    <remap from="~out_dropoff_area_status" to="/pms/dropoff_area_status"/>
+    <remap from="~out_vehicle_motion_instructions" to="/pms/vehicle_motion_instructions"/>
+    <remap from="~out_high_frequent_trajectory" to="/pms/high_frequent_trajectory_unthrottled"/>
+    <remap from="~out_lanelet_map_marker_array" to="/visualization/lanelet_map_marker_array"/>
+    <remap from="~out_static_polygons" to="/visualization/static_polygons"/>
+    <remap from="~out_vehicle_paths_vis" to="/visualization/vehicle_paths_vis"/>
+    <remap from="~out_assignment_marker" to="/visualization/assignment_marker"/>
+    <remap from="~out_vehicles_marker" to="/visualization/pms/vehicles"/>
+
+    <remap from="~in_grid" to="/costmap_node/costmap/costmap"/>
+    <remap from="~in_cam" to="/tks_pole_01/car2x/wavebee_v2x_ros_driver_node/out_cam_stamped"/>
+    <remap from="~in_vehicle_information_car2x" to="/tks_pole_01/car2x/from_vehicle/vehicle_information"/>
+
+    <remap from="~out_get_capacity" to="/get_capacity"/>
+    <remap from="~out_capacity" to="/capacity_request"/>
+    <remap from="~out_unregistered_station_id" to="/pms/get_unregistered_station_id"/>
+    <remap from="~out_vehicle_position" to="/vehicle_position_request"/>
+    <remap from="~out_unpark_vehicle" to="/unpark_vehicle_request"/>
+    <remap from="~out_register" to="/pms/register_vehicle"/>
+
+  </node>
+
+  <node pkg="ros_parking_management" type="demo_infrastructure_side_vehicle_components" name="demo_infrastructure_side_vehicle_components" output="screen" launch-prefix="$(arg normal_prefix)">
+
+    <param name="loop_rate" value="50"/>
+
+    <param name="minimum_parking_time" value="40"/>
+    <param name="maximum_parking_time" value="500"/>
+
+    <param name="station_id" value="1"/>
+
+    <param name="length" value="4.629" />
+    <param name="width" value="2.089" />
+    <param name="turning_radius" value="7.8" />
+    <param name="dist_rear_axle_numberplate" value="0.927" />
+
+    <param name="percent_electric" value="0.0"/>
+    <param name="percent_electric_fast" value="0.9"/>
+    <param name="percent_electric_inductive" value="0.0"/>
+
+    <remap from="~in_vehicle_information" to="/tks_pole_01/car2x/from_vehicle/vehicle_information"/>
+    <remap from="~in_parking_garage_information" to="/pms/parking_garage_information"/>
+    <remap from="~in_dropoff_area_status" to="/pms/dropoff_area_status"/>
+    <remap from="~in_register_vehicle" to="/pms/register_vehicle"/>
+    <remap from="~in_get_capacity" to="/get_capacity"/>
+
+    <remap from="~out_vehicle_marker" to="/visualization/vehicle_marker"/>
+
+  </node>
+
+</launch>
