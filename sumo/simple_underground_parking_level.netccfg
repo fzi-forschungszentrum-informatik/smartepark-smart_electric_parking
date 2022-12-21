@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Sun Oct 13 10:42:35 2019 by Eclipse SUMO netconvert Version 1.2.0
+This data file and the accompanying materials
+are made available under the terms of the Eclipse Public License v2.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v20.html
+SPDX-License-Identifier: EPL-2.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <!-- Read XML-node defs from FILE -->
+        <node-files value="simple_underground_parking_level.nod.xml"/>
+
+        <!-- Read XML-edge defs from FILE -->
+        <edge-files value="simple_underground_parking_level.edg.xml"/>
+
+    </input>
+
+    <output>
+        <!-- Include license info into every output file -->
+        <write-license value="true"/>
+
+        <!-- The generated net will be written to FILE -->
+        <output-file value="simple_underground_parking_level.net.xml"/>
+
+        <!-- Street names will be included in the output (if available) -->
+        <output.street-names value="true"/>
+
+    </output>
+
+    <processing>
+        <!-- Turn off normalizing node positions -->
+        <offset.disable-normalization value="true"/>
+
+    </processing>
+
+    <junctions>
+        <!-- Disables building turnarounds -->
+        <no-turnarounds value="true"/>
+
+        <!-- Generate INT intermediate points to smooth out intersection corners -->
+        <junctions.corner-detail value="10"/>
+
+        <!-- Generate INT intermediate points to smooth out lanes within the intersection -->
+        <junctions.internal-link-detail value="10"/>
+
+    </junctions>
+
+    <report>
+        <!-- Switches to verbose output -->
+        <verbose value="true"/>
+
+        <!-- Writes all non-error messages to FILE (implies verbose) -->
+        <message-log value="log/messages.log"/>
+
+        <!-- Writes all warnings and errors to FILE -->
+        <error-log value="log/error.log"/>
+
+    </report>
+
+</configuration>

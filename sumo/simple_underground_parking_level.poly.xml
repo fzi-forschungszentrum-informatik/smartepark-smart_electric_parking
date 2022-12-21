@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+   
+    <!-- Ground plane of the parking level provides the global reference plan. -->
+    <!--<poly id="1" type="reference_plane"   color="40,40,40"        fill="1" layer="1.0"        shape="0.0,0.0 54.8,0.0 54.8,55.1 0.0,55.1"/> -->
+    <poly id="1" type="reference_plane"   color="130,130,130"   fill="1" layer="1.0"      shape="0.0,0.0 54.8,0.0 55.9,0.0 55.9,7.6 61.0,7.6 61.0,13.75 58.3,13.75 58.3,19.0 54.8,19.0 54.8,55.1 0.0,55.1"/> 
+    <!-- Drivable Area of the parking level w/o walls.  -->
+    <poly id="2" type="ground_plane"      color="220,220,220"   fill="1" layer="2.0"      shape="1.5,0.4 54.2,0.4 54.2,54.7 1.5,54.7"/>
+    
+    <!-- Rooms on the left side. -->
+    <!--
+    <poly id="3" type="upper_section"     color="40,40,40"        fill="1" layer="2.0"        shape="0.0,49.4 6.5,49.4 6.5,55.1 0.0,55.1"/>
+    <poly id="4" type="upper_section"     color="40,40,40"        fill="1" layer="2.0"        shape="0.0,0.0 6.5,0.0 6.5,5.7 0.0,5.7"/>
+    -->
+    
+    <!-- Walls -->
+    <poly id="5" type="wall"              color="130,130,130"     fill="1" layer="2.0"    shape="13.5,46.9 40.0,46.9 40.0,47.2 13.5,47.2"/>
+    <poly id="6" type="wall"              color="130,130,130"     fill="1" layer="2.0"    shape="16.1,50.8 41.4,50.8 41.4,51.1 16.1,51.1"/>
+    <poly id="7" type="wall"              color="130,130,130"     fill="1" layer="2.0"    shape="41.0,50.8 41.3,50.8 41.3,54.7 41.0,54.7"/>
+    
+    <!-- Pedestrian Entrances and Exits-->
+    <poly id="8" type="ped_staircase"     color="220,220,220"       fill="1" layer="2.0"    shape="0.6,49.8 2.7,49.8 2.7,53.8 3.1,53.8 3.1,49.8 6.1,49.8 6.1,55.1 3.1,55.1 3.1,54.9 2.7,54.9 2.7,55.1 0.6,55.1 0.6,49.8" lineWidth="0.05"/>
+    <poly id="9" type="ped_staircase"     color="220,220,220"       fill="1" layer="2.0"    shape="3.9,0.4 6.2,0.4 6.2,5.4 3.9,5.4" lineWidth="0.05"/>
+    <poly id="10" type="ped_staircase"    color="220,220,220"      fill="1" layer="2.0"     shape="55.9,8.0 57.9,8.0 57.9,12.0 58.3,12.0 58.3,8.0 60.6,8.0 60.6,13.35 58.3,13.35 58.3,13.15 57.9,13.15 57.9,13.35 57.9,18.6 54.8,18.6 54.8,16.6 55.9,16.6 55.9,8.0" lineWidth="0.05"/>
+    
+</additional>

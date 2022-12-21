@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+
+  <!-- Entry of the parking level consists of two nodes. -->
+  <node id="01" x="41.4" y="52.9" type="priority"/>
+  
+  <!--<node id="02" x="16.1" y="52.9" type="priority"/> -->
+  
+    
+  <!-- First column is the one left. -->
+  <node id="10" x="10.0" y="52.9"  type="right_before_left" radius="0.5"/>
+  <node id="11" x="10.0" y="45.05" type="right_before_left"/> 
+  <node id="12" x="10.0" y="2.25"  type="right_before_left" radius="0.2"/> 
+  
+  
+  <!-- Second column is the middle one. -->
+  <node id="21" x="27.4" y="45.05" type="right_before_left"/> 
+  <node id="22" x="27.4" y="2.25"  type="right_before_left"/> 
+  
+  
+  <!-- The last colums is the right one. -->
+  <node id="31" x="44.8" y="45.05" type="right_before_left"/> 
+  <node id="32" x="44.8" y="2.25"  type="right_before_left"/> 
+  <node id="33" x="44.8" y="49.0"  type="right_before_left"/>
+  
+  <!-- Exit of the parking consists of one node. -->
+  <node id="41" x="21.0" y="49.00" type="right_before_left"/> 
+  
+  <!-- Pedestrian Entrance Nodes -->
+  <node id="100" x="1.5" y="51.0" type="unregulated"/>
+  <node id="101" x="5.0" y="3.0"  type="unregulated"/>
+</nodes>

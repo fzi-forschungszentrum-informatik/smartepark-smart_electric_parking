@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <net-file value="simple_underground_parking_level.net.xml"/>
+        <additional-files value="simple_underground_parking_level.poly.xml,parking_areas.add.xml"/>
+        <route-files value="simple_underground_parking_level.rou.xml"/>
+    </input>
+    <gui_only>
+        <gui-settings-file value="gui_config_default.xml"/>  
+        <gui-testing value="true"/>
+        <gui-testing-debug value="true"/>
+    </gui_only>
+    <processing>
+        <lateral-resolution value="0.2"/>  
+        <collision.action value="remove"/>
+        <collision.check-junctions value="true"/>
+        <threads value="1"/> <!-- 2 results in instable behavior-->
+        <!--<pedestrian.model value="nonInteracting"/>-->
+    </processing>
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+        <step-length value=".05"/>
+    </time>
+    <traci_server>
+        <!--<remote-port value="8311"/>-->
+    </traci_server>
+    <report>
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+        <log value="/tmp/my_log.dat"/>
+    </report>
+</configuration>

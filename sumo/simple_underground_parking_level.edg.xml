@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+
+  <edge id="entering_to_2nd_level" from="01" to="10" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.6"/>
+  
+  <!--<edge id="e_02_10" from="02" to="10" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.6" />-->
+  
+  <edge id="e_10_11" from="10" to="11" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.6" />
+  <edge id="e_11_12" from="11" to="12" priority="2" numLanes="1" speed="11.11" spreadType="center" width="7.0"/>
+  
+ 
+  <edge id="e_12_22" from="12" to="22" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.7" />
+  <edge id="e_22_21" from="22" to="21" priority="2" numLanes="1" speed="11.11" spreadType="center" width="7" />
+  <edge id="e_21_11" from="21" to="11" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.6" />
+  
+  <edge id="e_22_32" from="22" to="32" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.7" />
+  <edge id="e_32_31" from="32" to="31" priority="2" numLanes="1" speed="11.11" spreadType="center" width="7" />
+  <edge id="e_31_33" from="31" to="33" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.6" />
+  
+  <edge id="e_31_21" from="31" to="21" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.6" />
+  
+  
+  <edge id="ascent_to_1st_level" from="33" to="41" priority="2" numLanes="1" speed="11.11" spreadType="center" width="3.6"/>
+  
+  <!-- Edges, which are to connect pedestrian entrance nodes to road network, are roughly designed by hand (coordinates) -->
+  <edge id="ped_1" from="100" to="10" priority="2" numLanes="1" speed="1.6" spreadType="center" width="1.0" allow="pedestrian" shape="1.5,52.0 1.5,54.4 5.0,54.4 5.0,50.5 8.1,50.5"/>
+  <edge id="ped_2" from="12" to="101" priority="2" numLanes="1" speed="1.6" spreadType="center" width="1.0" allow="pedestrian" shape="7.3,1.0 4.5,1.0 4.5,4.8 5.6,4.8 5.6,3.0"/>
+
+</edges>

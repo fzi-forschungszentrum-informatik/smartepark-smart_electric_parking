@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+
+  <parkingArea id="Parking_Bay_I" lane="e_11_12_0" startPos="0" endPos="30" roadsideCapacity="0" angle="90">
+    <space x="6.5" y="48.25"  width="2.3"    length="5"/> 
+    <space x="6.5" y="45.95"  width="2.3"    length="5"/>
+    <space x="6.5" y="43.65"  width="2.3"    length="5"/>    
+    <space x="6.5" y="41.35"  width="2.3"    length="5"/>
+    <space x="6.5" y="39.05"  width="2.3"    length="5"/>
+    <space x="6.5" y="36.75"  width="2.3"    length="5"/>
+    <space x="6.5" y="34.45"  width="2.3"    length="5"/>
+    <space x="6.5" y="32.15"  width="2.3"    length="5"/>
+    <space x="6.5" y="29.85"  width="2.3"    length="5"/>
+    <space x="6.5" y="27.55"  width="2.3"    length="5"/>
+    <space x="6.5" y="25.25"  width="2.3"    length="5"/>
+    <space x="6.5" y="22.95"  width="2.3"    length="5"/>
+    <space x="6.5" y="20.65"  width="2.3"    length="5"/>
+    <space x="6.5" y="18.35"  width="2.3"    length="5"/>
+    <space x="6.5" y="16.05"  width="2.3"    length="5"/>
+    <space x="6.5" y="13.75"  width="2.3"    length="5"/>
+    <space x="6.5" y="11.45"  width="2.3"    length="5"/>
+    <space x="6.5" y="9.15"   width="2.3"    length="5"/>
+    <space x="6.5" y="6.85"   width="2.3"    length="5"/>
+  </parkingArea>   
+  
+  <parkingArea id="Parking_Bay_II_LEFT" lane="e_11_12_0" startPos="0" endPos="30" roadsideCapacity="0" angle="90">
+    <space x="18.4" y="42.05"   width="2.3"    length="5"/>
+    <space x="18.4" y="39.75"   width="2.3"    length="5"/>
+    <space x="18.4" y="37.45"   width="2.3"    length="5"/>
+    <space x="18.4" y="35.15"   width="2.3"    length="5"/>
+    <space x="18.4" y="32.85"   width="2.3"    length="5"/>
+    <space x="18.4" y="30.55"   width="2.3"    length="5"/>
+    <space x="18.4" y="28.25"   width="2.3"    length="5"/>
+    <space x="18.4" y="25.95"   width="2.3"    length="5"/>
+    <space x="18.4" y="23.65"   width="2.3"    length="5"/>
+    <space x="18.4" y="21.35"   width="2.3"    length="5"/>
+    <space x="18.4" y="19.05"   width="2.3"    length="5"/>
+    <space x="18.4" y="16.75"   width="2.3"    length="5"/>
+    <space x="18.4" y="14.45"   width="2.3"    length="5"/>
+    <space x="18.4" y="12.15"   width="2.3"    length="5"/>
+    <space x="18.4" y="9.85"    width="2.3"    length="5"/>
+    <space x="18.4" y="7.55"    width="2.3"    length="5"/>
+    <space x="18.4" y="5.25"    width="2.3"    length="5"/>
+  </parkingArea>
+
+  <parkingArea id="Parking_Bay_II_RIGHT" lane="e_22_21_0" startPos="0" endPos="30" roadsideCapacity="0" angle="270">
+    <space x="19" y="42.05"   width="2.3"    length="5"/>   
+    <space x="19" y="39.75"   width="2.3"    length="5"/>
+    <space x="19" y="37.45"   width="2.3"    length="5"/>
+    <space x="19" y="35.15"   width="2.3"    length="5"/>
+    <space x="19" y="32.85"   width="2.3"    length="5"/>
+    <space x="19" y="30.55"   width="2.3"    length="5"/>
+    <space x="19" y="28.25"   width="2.3"    length="5"/>
+    <space x="19" y="25.95"   width="2.3"    length="5"/>
+    <space x="19" y="23.65"   width="2.3"    length="5"/>
+    <space x="19" y="21.35"   width="2.3"    length="5"/>
+    <space x="19" y="19.05"   width="2.3"    length="5"/>
+    <space x="19" y="16.75"   width="2.3"    length="5"/>
+    <space x="19" y="14.45"   width="2.3"    length="5"/>
+    <space x="19" y="12.15"   width="2.3"    length="5"/>
+    <space x="19" y="9.85"    width="2.3"    length="5"/>
+    <space x="19" y="7.55"    width="2.3"    length="5"/>
+    <space x="19" y="5.25"    width="2.3"    length="5"/>
+  </parkingArea>
+
+  <parkingArea id="Parking_Bay_III_LEFT" lane="e_22_21_0" startPos="0" endPos="30" roadsideCapacity="0" angle="90">
+    <space x="35.9" y="42.05"   width="2.3"    length="5"/>   
+    <space x="35.9" y="39.75"   width="2.3"    length="5"/>
+    <space x="35.9" y="37.45"   width="2.3"    length="5"/>
+    <space x="35.9" y="35.15"   width="2.3"    length="5"/>
+    <space x="35.9" y="32.85"   width="2.3"    length="5"/>
+    <space x="35.9" y="30.55"   width="2.3"    length="5"/>
+    <space x="35.9" y="28.25"   width="2.3"    length="5"/>
+    <space x="35.9" y="25.95"   width="2.3"    length="5"/>
+    <space x="35.9" y="23.65"   width="2.3"    length="5"/>
+    <space x="35.9" y="21.35"   width="2.3"    length="5"/>
+    <space x="35.9" y="19.05"   width="2.3"    length="5"/>
+    <space x="35.9" y="16.75"   width="2.3"    length="5"/>
+    <space x="35.9" y="14.45"   width="2.3"    length="5"/>
+    <space x="35.9" y="12.15"   width="2.3"    length="5"/>
+    <space x="35.9" y="9.85"    width="2.3"    length="5"/>
+    <space x="35.9" y="7.55"    width="2.3"    length="5"/>
+    <space x="35.9" y="5.25"    width="2.3"    length="5"/>
+  </parkingArea>
+
+  <parkingArea id="Parking_Bay_III_RIGHT" lane="e_32_31_0" startPos="0" endPos="30" roadsideCapacity="0" angle="270">
+    <space x="36.5" y="42.05"   width="2.3"    length="5"/>   
+    <space x="36.5" y="39.75"   width="2.3"    length="5"/>
+    <space x="36.5" y="37.45"   width="2.3"    length="5"/>
+    <space x="36.5" y="35.15"   width="2.3"    length="5"/>
+    <space x="36.5" y="32.85"   width="2.3"    length="5"/>
+    <space x="36.5" y="30.55"   width="2.3"    length="5"/>
+    <space x="36.5" y="28.25"   width="2.3"    length="5"/>
+    <space x="36.5" y="25.95"   width="2.3"    length="5"/>
+    <space x="36.5" y="23.65"   width="2.3"    length="5"/>
+    <space x="36.5" y="21.35"   width="2.3"    length="5"/>
+    <space x="36.5" y="19.05"   width="2.3"    length="5"/>
+    <space x="36.5" y="16.75"   width="2.3"    length="5"/>
+    <space x="36.5" y="14.45"   width="2.3"    length="5"/>
+    <space x="36.5" y="12.15"   width="2.3"    length="5"/>
+    <space x="36.5" y="9.85"    width="2.3"    length="5"/>
+    <space x="36.5" y="7.55"    width="2.3"    length="5"/>
+    <space x="36.5" y="5.25"    width="2.3"    length="5"/>
+  </parkingArea>
+
+  <parkingArea id="Parking_Bay_IV" lane="e_32_31_0" startPos="0" endPos="30" roadsideCapacity="0" angle="90">
+    <space x="53.4" y="42.05"   width="2.3"    length="5"/>   
+    <space x="53.4" y="39.75"   width="2.3"    length="5"/>
+    <space x="53.4" y="37.45"   width="2.3"    length="5"/>
+    <space x="53.4" y="35.15"   width="2.3"    length="5"/>
+    <space x="53.4" y="32.85"   width="2.3"    length="5"/>
+    <space x="53.4" y="30.55"   width="2.3"    length="5"/>
+    <space x="53.4" y="28.25"   width="2.3"    length="5"/>
+    <space x="53.4" y="25.95"   width="2.3"    length="5"/>
+    <space x="53.4" y="23.65"   width="2.3"    length="5"/>
+    <space x="53.4" y="21.35"   width="2.3"    length="5"/>
+    <space x="53.4" y="14.45"   width="2.3"    length="5"/>
+    <space x="53.4" y="12.15"   width="2.3"    length="5"/>
+    <space x="53.4" y="9.85"    width="2.3"    length="5"/>
+    <space x="53.4" y="7.55"    width="2.3"    length="5"/>
+    <space x="53.4" y="5.25"    width="2.3"    length="5"/>
+  </parkingArea>
+
+  <chargingStation id="charging_station_1" lane="e_32_31_0" startPos="0" endPos="2" power="10000" efficiency="0.95" chargeDelay="3" chargeInTransit="0"/>
+  
+  <!--
+  <rerouter id="myRerouter" edges="-306390346#0 -306390346#0.71" pos="733.45,789.91">
+    <interval begin="0" end="2000">
+      <parkingAreaReroute id="parkingArea_-306390346#0_1_3"/>
+      <parkingAreaReroute id="parkingArea_-306390346#0.71_1_40"/>
+    </interval>
+  </rerouter>
+  -->
+</additional>

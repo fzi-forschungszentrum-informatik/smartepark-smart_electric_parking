@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name="Fasanengarten_Parking_Garage">
+    <static>true</static>
+    <!-- -->
+    <link name="body">
+      <pose>0.0 0.0 0.0  0.0 0.0 0.0</pose>
+      <collision name="body_collision">
+        <geometry>
+          <mesh><scale>1.0 1.0 1.0</scale><uri>model://Fasanengarten_Parking_Garage/meshes/tg_fasanengarten_7_1.dae</uri></mesh>
+        </geometry>
+      </collision>
+      <visual name="visual_collision">
+        <geometry>
+          <mesh><scale>1.0 1.0 1.0</scale><uri>model://Fasanengarten_Parking_Garage/meshes/tg_fasanengarten_7_1.dae</uri></mesh>
+        </geometry>
+      </visual>
+    </link>
+
+  </model>
+</sdf>

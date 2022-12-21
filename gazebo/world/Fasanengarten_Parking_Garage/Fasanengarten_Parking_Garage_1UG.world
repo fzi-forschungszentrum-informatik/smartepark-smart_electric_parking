@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <world name="Fasanengarten_Parking_Garage_1UG">
+    <!-- Environment -->
+    <scene>
+      <grid>true</grid>
+      <origin_visual>false</origin_visual>
+      <ambient>0.592 0.624 0.635 1.0</ambient>
+      <background>0.0 0.74901 1.0 1.0</background>
+      <shadows>1</shadows>
+    </scene>
+
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+    </physics>
+
+    <!-- GUI Configuration-->
+    <gui>
+      <plugin name='SceneGraphPlugin' filename='libGUISceneGraphPlugin.so'/>
+      <camera name='user_camera'>
+        <pose frame=''>-36 -11 111.0 0.0 1.57 1.57</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+
+
+      <!--starting position of the gui camera-->
+      <camera name="gzclient_camera">
+        <pose> 20 -10 35.0 0.0 1.54 0 </pose>
+      </camera>
+
+    </gui>
+
+    <!-- A ground plane, where elements can be moved onto. -->
+    <include>
+      <uri>model://ground</uri>
+      <name>ground_plane</name>
+      <pose>0 0 -0.2 0.0 0.0 0.0</pose>
+    </include>
+
+    <!-- global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Point Light -->
+    <!-- <light name='user_point_light_0' type='point'>
+      <pose frame=''>40 -7 5.0 0.0 0.0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light> -->
+
+
+    <!-- Point Light -->
+    <!-- <light name='user_point_light_1' type='point'>
+      <pose frame=''>20 -7 5.0 0.0 0.0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light> -->
+
+    <!-- Include the Parking Garage as a model reference. -->
+    <include>
+      <uri>model://Fasanengarten_Parking_Garage</uri>
+      <name>Fasanengarten_Parking_Garage</name>
+      <pose>-0.205294 1.856615 0.0 0.0 0.0 -1.572441</pose>
+    </include>
+
+  </world>
+</sdf>
